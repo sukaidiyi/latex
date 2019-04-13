@@ -1,0 +1,111 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article} %这个我就不多说了，头文件
+\usepackage{url} %这个我也不多说了
+\usepackage{fontspec,xltxtra,xunicode} %最新的mactex都有
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{setspace}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue,
+    citecolor=cyan,
+}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont{Songti SC} %设置中文字体
+\XeTeXlinebreaklocale “zh”
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt %文章内中文自动换行，可以自行调节
+\setlength{\parskip}{1em}
+
+\begin{document}
+\begin{enumerate}
+\item 极限定义 
+    \par $\displaystyle\lim _{x \rightarrow x_{0}} f(x)=A \Leftrightarrow f_{-}\left(x_{0}\right)=f_{+}\left(x_{0}\right)=A$
+    \par \href{https://www.matongxue.com/matex/2576/react/}{题目1}
+\item 无穷小定义
+    \par $\displaystyle\lim _{x \rightarrow x_{0}} f(x)=A \Leftrightarrow f\left(x\right)=A+\alpha$
+    其中$\displaystyle\lim_{x\to x_0}\alpha=0$
+    \par \href{https://www.matongxue.com/matex/2575/react/}{题目1} 
+\item 保号定理
+     \par 设$\displaystyle\lim_{x\to x_0}f(x)=A$,又$A > 0$或$A < 0$,则$\exists\delta > 0$
+     \par 当$x\in(x_0-\delta,x_0+\delta)$,且$x\neq x_0$时，$f(x)>0$(或$f(x)<0$)
+     \par \href{https://www.matongxue.com/matex/2578/react/}{题目1} 
+\item 无穷小比阶
+    设$\lim\alpha(x)=0,\lim\beta(x)=0,\beta\neq 0$
+    \begin{enumerate}
+        \item 高阶无穷小
+        \par 若$\displaystyle\frac{\alpha(x)}{\beta(x)}=0$,则$\alpha(x)$是$\beta(x)$高阶的无穷小，
+        \par 记为$\alpha(x)=o(\beta(x))$ \quad 
+        \par \href{https://www.matongxue.com/matex/2579/react/}{题目1} 
+        \item 低阶无穷小
+        \par 若$\displaystyle\frac{\alpha(x)}{\beta(x)}=\infty$,则$\alpha(x)$是$\beta(x)$低阶的无穷小
+        \par \href{https://www.matongxue.com/matex/2582/react/}{题目1} 
+        \item 同阶无穷小
+        \par 若$\displaystyle\frac{\alpha(x)}{\beta(x)}=c(c\neq 0)$,则$\alpha(x)$是$\beta(x)$是同阶的无穷小
+        \par \href{https://www.matongxue.com/matex/2583/react/}{题目1} 
+        \item k阶无穷小
+        \par 若$\displaystyle\frac{\alpha(x)}{\beta^k(x)}=c(c\neq 0,k>0)$,则$\alpha(x)$是$\beta(x)$是k阶的无穷小
+        \par \href{https://www.matongxue.com/matex/2581/react/}{题目1} 
+        \item 等价无穷小
+        \par 若$\displaystyle\frac{\alpha(x)}{\beta(x)}=1$,则$\alpha(x)$是$\beta(x)$是等价的无穷小
+        \par 记为$\alpha(x)\sim\beta(x)$
+        \par \href{https://www.matongxue.com/matex/2580/react/}{题目1} 
+    \end{enumerate}
+\item 常用的等价无穷小
+    \begin{enumerate}
+        \item $\sin x\sim x$\quad \href{https://www.matongxue.com/matex/2584/react/}{题目1} 
+        \item $\arcsin x\sim x$\quad \href{https://www.matongxue.com/matex/2585/react/}{题目1} 
+        \item $\tan x\sim x$\quad \href{https://www.matongxue.com/matex/2586/react/}{题目1} 
+        \item $\arctan x\sim x$\quad \href{https://www.matongxue.com/matex/2587/react/}{题目1} 
+        \item $\ln(1+x)\sim x$\quad \href{https://www.matongxue.com/matex/2588/react/}{题目1} 
+        \item $\displaystyle\ln(1+x)\sim \frac{x}{\ln a}$\quad \href{https://www.matongxue.com/matex/2590/react/}{题目1} 
+        \item $e^x-1 \sim x$\quad \href{https://www.matongxue.com/matex/2589/react/}{题目1} 
+        \item $1-\cos x\sim \frac{1}{2}x^2$\quad \href{https://www.matongxue.com/matex/2591/react/}{题目1} 
+        \item $(1+x)^{\frac{1}{n}}-1\sim \frac{1}{n}x$\quad \href{https://www.matongxue.com/matex/2592/react/}{题目1} 
+    \end{enumerate}
+\item 无穷小的性质
+    \begin{enumerate}
+        \item 有限个无穷小的代数和为无穷小\quad \href{https://www.matongxue.com/matex/2593/react/}{题目1} 
+        \item 有限个无穷小的乘积为无穷小\quad \href{https://www.matongxue.com/matex/2594/react/}{题目1} 
+        \item 无穷小乘以有界变量为无穷小\quad \href{https://www.matongxue.com/matex/2595/react/}{题目1} 
+    \end{enumerate}
+\item 在同一变化趋势下
+    \begin{enumerate}
+        \item 无穷大的倒数为无穷小\quad \href{https://www.matongxue.com/matex/2596/react/}{题目1}
+        \item 无穷小的倒数为无穷大\quad \href{https://www.matongxue.com/matex/2597/react/}{题目1}
+    \end{enumerate}
+\item 极限四则运算
+    $\lim f(x)=A,\lim g(x)=B$,则
+    \begin{enumerate}
+        \item $\lim (f(x) \pm g(x))=A \pm B$\quad \href{https://www.matongxue.com/matex/2598/react/}{题目1}
+        \item $\lim f(x)g(x)=AB$\quad \href{https://www.matongxue.com/matex/2599/react/}{题目1}
+        \item $\displaystyle\lim \frac{f(x)}{g(x)}=\frac{A}{B}(B \neq 0)$
+        \quad \href{https://www.matongxue.com/matex/2600/react/}{题目1}
+    \end{enumerate}
+\item 夹逼定理
+    \begin{enumerate}
+        \item 数列版
+        \par 如果数列$\{x_n\},\{y_n\},\{z_n\}$满足$y_n\leq x_n \leq z_n(n=1,2,3,\cdots)$
+        \par 且$\displaystyle\lim_{n\to\infty}y_n=A,\lim_{n\to\infty x_n}=A$,则$\displaystyle\lim_{n\to\infty}x_n=A$
+        \par \href{https://www.matongxue.com/matex/2602/react/}{题目1}
+        \item 函数版
+        \par 设在$x_0$的邻域内，恒有$\varphi(x)\leq f(x) \leq \phi(x)$
+        \par 且$\displaystyle\lim_{x\to x_0}\varphi(x)=\lim_{x\to x_0}\phi(x)=A$,
+        则$\displaystyle\lim_{x\to x_0}f(x)=A$
+        \par \href{https://www.matongxue.com/matex/2601/react/}{题目1}
+    \end{enumerate}
+\item 单调有界定理:单调有界的数列必有极限
+    \par \href{https://www.matongxue.com/matex/2603/react/}{题目1}
+\item 两个重要的极限
+    \begin{enumerate}
+        \item $\displaystyle\lim_{x\to 0}\frac{\sin x}{x}=1$
+        \quad \href{https://www.matongxue.com/matex/2604/react/}{题目1}
+        \item $\displaystyle\lim_{x\to 0}(1+x)^{\frac{1}{x}}=e$
+        \quad \href{https://www.matongxue.com/matex/2605/react/}{题目1}
+    \end{enumerate}
+\end{enumerate}
+\end{document}
